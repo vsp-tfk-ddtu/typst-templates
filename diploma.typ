@@ -12,7 +12,15 @@
     right: 1cm,
     bottom: 2cm,
     left: 2.5cm
-  )
+  ),
+  numbering: (..numbers) => {
+    let start_pagination = counter(page).at(<start>).at(0);
+    if numbers.pos().at(0) < start_pagination {
+      return;
+    }
+    return numbers.pos().at(0);
+  },
+  number-align: center + top
 )
 
 #set heading(numbering: (..numbers) => {
@@ -90,7 +98,7 @@
 ) = {
   align(horizon)[
     #align(center)[
-      = Пояснювальна записка
+      #heading(outlined: false)[Пояснювальна записка]
       до кваліфікаційної роботи
       #parbreak()
       #text(size: 12pt)[
@@ -198,11 +206,11 @@
 
   align(center)[
     #block(above: 2em)[
-      #heading(level: 2, numbering: none)[ЗАВДАННЯ]
+      #heading(level: 2, numbering: none, outlined: false)[ЗАВДАННЯ]
     ]
     #block(above: 1em, below: 0em)[
       #par(leading: 0.5em)[
-        #heading(level: 2, numbering: none)[
+        #heading(level: 2, numbering: none, outlined: false)[
           НА КВАЛІФІКАЦІЙНУ РОБОТУ ЗДОБУВАЧУ ОСВІТИ
         ]
       ]
@@ -274,7 +282,7 @@
   plan: ()
 ) = {
   align(center)[
-    = КАЛЕНДАРНИЙ ПЛАН
+    #heading(outlined: false)[КАЛЕНДАРНИЙ ПЛАН]
   ]
   
   par(justify: false, leading: 0.5em)[
@@ -370,7 +378,7 @@
   performance_supervisor_name: none
 ) = {
   align(bottom)[
-    = Оцінки по роботі
+    #heading(outlined: false)[Оцінки по роботі]
 
     #table(
       columns: (1.5fr, 1fr, auto, auto),
@@ -511,9 +519,13 @@
 
 #pagebreak()
 
-// ==========================================
+#outline(indent: 1.25em)
 
-= ВСТУП
+#pagebreak()
+
+// Diploma starts here :tada:
+
+= ВСТУП <start>
 
 // TODO: use fix-indent https://github.com/flaribbit/indenta
 #""
@@ -524,12 +536,19 @@
 
 = Основна частина
 == Аналіз проблемної галузі
-=== Постановка задачі
-
-// This make the first line  of the first paragraph to be indented
-// BUT adds an additional line
-#""
 
 #lorem(200)
 
-#lorem(100)
+=== Постановка задачі
+
+#lorem(400)
+
+#pagebreak()
+
+= ВИСНОВОК
+
+#lorem(200)
+
+#pagebreak()
+
+= ПЕРЕЛІК ПОСИЛАНЬ
