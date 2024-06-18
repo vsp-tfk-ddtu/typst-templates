@@ -532,10 +532,63 @@
 
 #lorem(200)
 
-#pagebreak(weak: true)
+#pagebreak()
 
 = Основна частина
+
+== Before header
+
+#lorem(50)
+
+=== Small Header one
+
+text
+
+=== Small Header two
+
+text
+
+Now, let's display an image:
+
+#figure(
+  caption: "Ян Вермеер — Die Malkunst",
+)[
+  #image(
+    "images/jan_vermeer.png",
+  )
+]
+
+Now, let's display a second image:
+
+#figure(
+  caption: "Ян Вермеер — Die Malkunst",
+)[
+  #image(
+    "images/jan_vermeer.png",
+  )
+]
+
+#pagebreak()
+
 == Аналіз проблемної галузі
+
+For the first example, let's display some code:
+
+```rust
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+```
+
+Another one.
+
+#figure(
+  caption: "Ян Вермеер — Die Malkunst"
+)[
+  #image(
+    "images/jan_vermeer.png",
+  )
+]
 
 #lorem(200)
 
@@ -544,6 +597,34 @@
 #lorem(400)
 
 #pagebreak()
+
+== Перелік вимог до програмної системи
+
+#lorem(200)
+
+#pagebreak()
+
+#pagebreak()
+
+= Додаткова частина
+
+== Перелік вимог до програмної системи
+
+Now, let's display an image:
+
+#figure(
+  caption: "Ян Вермеер — Die Malkunst",
+)[
+  #image(
+    "images/jan_vermeer.png",
+  )
+]
+
+#figure(
+  caption: "Table",
+)[
+  #table()
+]
 
 = ВИСНОВОК
 
