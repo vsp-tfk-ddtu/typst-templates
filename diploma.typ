@@ -1,3 +1,5 @@
+#import "@preview/indenta:0.0.3": fix-indent
+
 #set text(
   font: "Times New Roman",
   size: 14pt,
@@ -23,14 +25,8 @@
   number-align: center + top
 )
 
-#set heading(numbering: (..numbers) => {
-  let level = numbers.pos().len()
-  if level == 1 {
-    return;
-  }
+#set heading(numbering: "1.")
 
-  return numbering("1.", ..numbers.pos().slice(1));
-})
 #show heading: it => [
   #block(above: 1em, below: 1em)[#it]
 ]
@@ -38,6 +34,8 @@
 #show heading.where(level: 1): set align(center)
 
 #set par(first-line-indent: 1.25cm, justify: true, leading: 1.5em)
+
+#show: fix-indent()
 
 // ==========================================
 
@@ -98,7 +96,7 @@
 ) = {
   align(horizon)[
     #align(center)[
-      #heading(outlined: false)[Пояснювальна записка]
+      #heading(outlined: false, numbering: none)[Пояснювальна записка]
       до кваліфікаційної роботи
       #parbreak()
       #text(size: 12pt)[
@@ -282,7 +280,7 @@
   plan: ()
 ) = {
   align(center)[
-    #heading(outlined: false)[КАЛЕНДАРНИЙ ПЛАН]
+    #heading(outlined: false, numbering: none)[КАЛЕНДАРНИЙ ПЛАН]
   ]
   
   par(justify: false, leading: 0.5em)[
@@ -378,7 +376,7 @@
   performance_supervisor_name: none
 ) = {
   align(bottom)[
-    #heading(outlined: false)[Оцінки по роботі]
+    #heading(outlined: false, numbering: none)[Оцінки по роботі]
 
     #table(
       columns: (1.5fr, 1fr, auto, auto),
@@ -525,10 +523,7 @@
 
 // Diploma starts here :tada:
 
-= ВСТУП <start>
-
-// TODO: use fix-indent https://github.com/flaribbit/indenta
-#""
+#heading(numbering: none)[ВСТУП] <start>
 
 #lorem(200)
 
@@ -551,7 +546,7 @@ text
 Now, let's display an image:
 
 #figure(
-  caption: "Ян Вермеер — Die Malkunst",
+  caption: "Ян Вермеер — Die Malkunst 1",
 )[
   #image(
     "images/jan_vermeer.png",
@@ -561,7 +556,7 @@ Now, let's display an image:
 Now, let's display a second image:
 
 #figure(
-  caption: "Ян Вермеер — Die Malkunst",
+  caption: "Ян Вермеер — Die Malkunst 2",
 )[
   #image(
     "images/jan_vermeer.png",
@@ -574,16 +569,20 @@ Now, let's display a second image:
 
 For the first example, let's display some code:
 
-```rust
+#figure(
+  caption: "Rust code example",
+)[
+  ```rust
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 ```
+]
 
 Another one.
 
 #figure(
-  caption: "Ян Вермеер — Die Malkunst"
+  caption: "Ян Вермеер — Die Malkunst 3",
 )[
   #image(
     "images/jan_vermeer.png",
@@ -604,11 +603,7 @@ Another one.
 
 #pagebreak()
 
-#pagebreak()
-
-= Додаткова частина
-
-== Перелік вимог до програмної системи
+== Аналіз дослідної експлуатації
 
 Now, let's display an image:
 
@@ -623,13 +618,17 @@ Now, let's display an image:
 #figure(
   caption: "Table",
 )[
-  #table()
+  #table(
+    columns: (1fr, 1fr),
+    [one],[two],
+    [three],[four]
+  )
 ]
 
-= ВИСНОВОК
+#heading(numbering: none)[ВИСНОВОК]
 
 #lorem(200)
 
 #pagebreak()
 
-= ПЕРЕЛІК ПОСИЛАНЬ
+#heading(numbering: none)[ПЕРЕЛІК ПОСИЛАНЬ]
