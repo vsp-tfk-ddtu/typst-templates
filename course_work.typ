@@ -57,14 +57,33 @@
 #let discipline = "Конструювання програмного забезпечення"
 #let title = "Практичне застосування патерну проектування Decorator у мові програмування Python"
 
+#let work_due_to = "24 червня 2024"
+#let task_received_at = "24.02.2024"
+
 #let supervisor_name = "ЧИЧИКОВ Павло"
 #let supervisor_title = "Викладач"
+#let commission_head_name = "СОБАКЕВИЧ Михайло"
 
 #let commission_members = (
   "Чичиков П. Н.",
   "Коробочка А. В."
 )
 
+#let calendar_plan_data = (
+  ("Аналіз проблемної галузі та постановка задачі", "02.02.2023 - 06.02.2023"),
+  ("Опис прийнятих проектних рішень", "06.02.2023 - 09.02.2023"),
+  ("Розробка програми", "09.02.2023 - 01.03.2023"),
+  ("Опис розробленої програми", "01.03.2023 - 06.03.2023"),
+  ("Графічна частина (презентація), вступ, висновки, перелік посилань, реферат", "06.03.2023 - 12.03.2023"),
+  ("Попередній захист роботи", "13.03.2023"),
+  ("Захист роботи", "14.03.2023"),
+)
+
+#let initial_data = [
+  Початкові дані, що ми маємо наразі і які необхідні для вирішення даної курсової роботи. Ще одне речення. І ще одне. Дивіться приклад курсової роботи, щоб додати правильні початкові дані.
+]
+
+// Title Page
 #unindented[
   #institution()
     #cycle_commission(commission_name: commission_name)
@@ -85,4 +104,54 @@
 
 #pagebreak()
 
-= ВСТУП <start>
+
+// Task Page
+#unindented[
+  #institution()
+  #task_header(
+    department_name: department_name,
+    commission_name: commission_name,
+    commission_short: commission_name_short,
+    klnowledge_branch: knowledge_branch,
+    specialty: specialty,
+    commission_head_name: commission_head_name,
+  )
+  #task_body(
+    to_whom: student_name_genitive,
+    group: group,
+    work_name: title,
+    work_due_to: work_due_to,
+    initial_data: initial_data
+  )
+
+  #pagebreak()
+
+  #task_calendar_plan(plan: calendar_plan_data)
+  #task_signature(task_received_at: task_received_at)
+]
+
+#pagebreak()
+
+// Grade Page
+#unindented[
+  #institution()
+  #grade_header(
+    student_name: student_name,
+    group: group,
+  )
+  #grade_title(title: title)
+  #grades(
+    supervisor_name: supervisor_name,
+    performance_supervisor_name: commission_head_name
+  )
+]
+
+#pagebreak()
+
+#outline(indent: 1.25em)
+
+#pagebreak()
+
+#heading(numbering: none)[ВСТУП] <start>
+
+#lorem(150)

@@ -260,23 +260,24 @@
   group: none,
   title: none
 ) = {
-  ""
-  par(justify: false)[
-    #text(size: 12pt)[
-      #grid(
-        columns: (auto, 1fr),
-        align: (left, right),
-        [Відділення #department_name], [Циклова комісія #commission_short]
-      )
-      #parbreak()
-      #grid(
-        columns: (auto, 1fr),
-        align: (left, right),
-        [Спеціальність], [#specialty]
-      )
-      #parbreak()
-      #block(above: 2em)[
-        Здобувач освіти #underline[#student_name] групи #underline[#group]
+  block(above: 2em)[
+    #par(justify: false)[
+      #text(size: 12pt)[
+        #grid(
+          columns: (auto, 1fr),
+          align: (left, right),
+          [Відділення #department_name], [Циклова комісія #commission_short]
+        )
+        #parbreak()
+        #grid(
+          columns: (auto, 1fr),
+          align: (left, right),
+          [Спеціальність], [#specialty]
+        )
+        #parbreak()
+        #block(above: 2em)[
+          Здобувач освіти #underline[#student_name] групи #underline[#group].
+        ]
       ]
     ]
   ]
