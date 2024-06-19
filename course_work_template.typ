@@ -159,7 +159,9 @@
     ]
   ]
 
-  underline[#initial_data]
+  par(first-line-indent: 1.25cm)[ // TODO: fix indentation
+    #underline[#initial_data]
+  ]
 }
 
 #let task_calendar_plan(

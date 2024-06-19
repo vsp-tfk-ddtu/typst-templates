@@ -275,6 +275,8 @@ Now, let's display an image:
   )
 ]
 
+#pagebreak()
+
 #heading(numbering: none)[ВИСНОВОК]
 
 #lorem(200)
