@@ -125,19 +125,6 @@
       ]
     ]
   )
-
-  align(center)[
-    #block(above: 2em)[
-      #heading(level: 2, numbering: none, outlined: false)[ЗАВДАННЯ]
-    ]
-    #block(above: 1em, below: 0em)[
-      #par(leading: 0.5em)[
-        #heading(level: 2, numbering: none, outlined: false)[
-          НА КВАЛІФІКАЦІЙНУ РОБОТУ ЗДОБУВАЧУ ОСВІТИ
-        ]
-      ]
-    ]
-  ]
 }
 
 #let task_body(
@@ -149,6 +136,19 @@
   work_content: "A set of questions that has to be worked out.",
   graphic_material: "A graphic material with a set of necessary figures."
 ) = {
+    align(center)[
+      #block(above: 2em)[
+        #heading(level: 2, numbering: none, outlined: false)[ЗАВДАННЯ]
+      ]
+      #block(above: 1em, below: 0em)[
+        #par(leading: 0.5em)[
+          #heading(level: 2, numbering: none, outlined: false)[
+            НА КВАЛІФІКАЦІЙНУ РОБОТУ ЗДОБУВАЧУ ОСВІТИ
+          ]
+        ]
+      ]
+    ]
+
     text(size: 12pt)[
       #{""}
       #par(leading: 1em, first-line-indent: 0em)[
@@ -171,7 +171,11 @@
 }
 
 #let task_consultants(
-  issue_date: "24 червня 2024"
+  issue_date: "24 червня 2024",
+  main_part: none,
+  economy_part: none,
+  work_health: none,
+  formatting: none
 ) = {
   par(justify: false, leading: 0.5em)[
     Консультанти розділів роботи:
@@ -179,7 +183,6 @@
     #text(size: 12pt)[
       #table(
         columns: (1fr, 1fr, 1fr, 1fr),
-        rows: 2em,
         align: center + horizon,
         table.header(
           table.cell(rowspan: 2)[Розділ],
@@ -188,10 +191,10 @@
           [Завдання видав],
           [Завдання прийняв]
         ),
-        [Основна частина],[],[],[],
-        [Економічна частина],[],[],[],
-        [Охорона праці],[],[],[],
-        [Нормоконтроль],[],[],[],
+        [Основна частина],[#main_part],[],[],
+        [Економічна частина],[#economy_part],[],[],
+        [Охорона праці],[#work_health],[],[],
+        [Нормоконтроль],[#formatting],[],[],
       )
     ]
     #align(right)[

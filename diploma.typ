@@ -60,6 +60,7 @@
 #let economy_supervisor_name = "КОРОБОЧКА Анастасія"
 #let work_health_supervisor_name = "ПЛЮШКІН Григорій"
 #let performance_supervisor_name = "СОБАКЕВИЧ Михайло"
+#let formatting_supervisor_name = "СОБАКЕВИЧ Михайло"
 
 #let title = "Проектування та розробка найкращого проекту у світі, першої сторінки інтернету"
 #let work_due_to = "24 червня 2024"
@@ -130,7 +131,12 @@
 
   #pagebreak()
 
-  #task_consultants()
+  #task_consultants(
+    main_part: supervisor_name,
+    economy_part: economy_supervisor_name,
+    work_health: work_health_supervisor_name,
+    formatting: formatting_supervisor_name
+  )
   #task_calendar_plan(plan: calendar_plan_data)
   #task_signature()
 ]
