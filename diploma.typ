@@ -1,5 +1,5 @@
 #import "@preview/indenta:0.0.3": fix-indent
-#import "common.typ": unindented, institution
+#import "common.typ": unindented, institution, city_and_year
 #import "diploma_template.typ": *
 
 #set text(

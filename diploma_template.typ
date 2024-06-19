@@ -75,16 +75,6 @@
   ]
 }
 
-#let city_and_year(city: none) = {
-  let today = datetime.today()
-  
-  align(bottom)[
-    #align(center)[
-      м. #city — #today.year()
-    ]
-  ]
-}
-
 #let task_table(
   department_name,
   commission_name,
