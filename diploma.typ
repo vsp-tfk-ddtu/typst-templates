@@ -5,7 +5,7 @@
 #set text(
   font: "Times New Roman",
   size: 14pt,
-  lang: "ua",
+  lang: "uk",
   region: "ua"
 )
 
@@ -283,4 +283,11 @@ Now, let's display an image:
 
 #pagebreak()
 
-#heading(numbering: none)[ПЕРЕЛІК ПОСИЛАНЬ]
+// #heading(numbering: none)[ПЕРЕЛІК ПОСИЛАНЬ]
+
+#bibliography(
+  "bibl.yaml", 
+  title: "ПЕРЕЛІК ПОСИЛАНЬ", 
+  full: true, 
+  style: "ieee"
+)
