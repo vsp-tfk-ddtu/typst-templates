@@ -5,7 +5,7 @@
 #set text(
   font: "Times New Roman",
   size: 14pt,
-  lang: "uk",
+  lang: "ua",
   region: "ua"
 )
 
@@ -283,11 +283,14 @@ Now, let's display an image:
 
 #pagebreak()
 
-// #heading(numbering: none)[ПЕРЕЛІК ПОСИЛАНЬ]
-
-#bibliography(
-  "bibl.yaml", 
-  title: "ПЕРЕЛІК ПОСИЛАНЬ", 
-  full: true, 
-  style: "ieee"
-)
+// TODO: this is the bug that requires us to write the language to uk in bibliography.
+#text(
+  lang: "uk"
+)[
+  #bibliography(
+    "bibl.yaml", 
+    title: "ПЕРЕЛІК ПОСИЛАНЬ", 
+    full: true, 
+    style: "ieee",
+  )
+]
