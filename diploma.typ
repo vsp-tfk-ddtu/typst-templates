@@ -243,6 +243,8 @@ Another one.
 
 === Постановка задачі
 
+Here is the reference #cite(<electronic>).
+
 #lorem(400)
 
 #pagebreak()
@@ -290,7 +292,7 @@ Now, let's display an image:
   #bibliography(
     "bibl.yaml", 
     title: "ПЕРЕЛІК ПОСИЛАНЬ", 
-    full: true, 
+    full: true,
     style: "ieee",
   )
 ]
