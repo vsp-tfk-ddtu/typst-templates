@@ -1,3 +1,4 @@
+#import "../utils.typ": unindented, institution, city_and_year
 
 #let department(
   department_name: none,
