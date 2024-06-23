@@ -1,10 +1,10 @@
-harry:
+clean_code:
     type: Book
-    title: Harry Potter and the Order of the Phoenix
-    author: Rowling, J. K.
-    volume: 5
-    page-total: 768
-    date: 2003-06-21
+    title: Clean Code
+    author: Robert Martin
+    volume: 1
+    page-total: 367
+    date: 2012-06-19
 
 electronic:
     type: Web

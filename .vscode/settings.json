@@ -1,0 +1,21 @@
+{
+    "cSpell.language": "uk,en-GB",
+    "spellright.language": [
+        "uk",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "typst"
+    ],
+    "spellright.parserByClass": {
+        "typst": {
+            "parser": "plain"
+        }
+    },
+    "cSpell.enableFiletypes": [
+        "typst"
+    ]
+}

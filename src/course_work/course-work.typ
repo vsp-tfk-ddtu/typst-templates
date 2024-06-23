@@ -17,7 +17,7 @@
   discipline: none,
   course_num: "IV",
   group: none,
-  klnowledge_branch: none,
+  knowledge_branch: none,
   specialty: none,
   student_name: none,
   supervisor_name: none,
@@ -47,7 +47,7 @@
               #parbreak()
               групи #underline[#group]
               #parbreak()
-              галузі знань #klnowledge_branch
+              галузі знань #knowledge_branch
               #parbreak()
               спеціальності #specialty 
               #parbreak()
@@ -77,7 +77,6 @@
 #let task_table(
   department_name,
   commission_name,
-  klnowledge_branch,
   specialty,
 ) = {
   par(leading: 0.5em, justify: false)[
@@ -97,11 +96,11 @@
   department_name: none,
   commission_name: none,
   commission_short: "ПЗ та ПМ",
-  klnowledge_branch: none,
+  knowledge_branch: none,
   specialty: none,
   commission_head_name: "J. Jr. Doe",
 ) = {
-  task_table(department_name, commission_name, klnowledge_branch, specialty)
+  task_table(department_name, commission_name, specialty)
 
   grid(
     columns: (1fr, 1fr),
@@ -149,7 +148,7 @@
       #parbreak()
       Тема курсової роботи: «*#work_name*»
       #parbreak()
-      Строк подання здобувачем освіти роботи #work_due_to
+      Строк подання здобувачем освіти роботи #work_due_to.
     ]
   ]
 
