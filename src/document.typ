@@ -35,6 +35,15 @@
 
   set par(first-line-indent: 1.25cm, justify: true, leading: 1.5em)
 
+  set list(indent: 1.25cm)
+  set enum(indent: 1.25cm)
+
+  show link: underline
+
+  show raw.where(block: true): it => [
+    #par(leading: 1em)[#it]
+  ]
+
   show: fix-indent()
 
   body
