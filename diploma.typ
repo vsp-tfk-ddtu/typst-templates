@@ -136,7 +136,7 @@ Here is the reference #cite(<electronic>).
 
 #pagebreak()
 
-== Аналіз дослідної експлуатації
+= Аналіз дослідної експлуатації
 
 Now, let's display an image:
 
