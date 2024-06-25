@@ -1,12 +1,13 @@
 #import "@preview/indenta:0.0.3": fix-indent
 
-#let setup_layout(body) = {
+#let set_layout(body) = {
   set text(
-    font: "Times New Roman",
-    size: 14pt,
+    font: "Noto Serif",
+    size: 12pt,
     lang: "ua",
     region: "ua"
   )
+
   set page(
     paper: "a4",
     margin: (
@@ -16,8 +17,7 @@
       left: 2.5cm
     ),
     numbering: (..numbers) => {
-      let start_pagination = counter(page).at(<start>).at(0);
-      if numbers.pos().at(0) < start_pagination {
+      if numbers.pos().at(0) == 1 {
         return;
       }
       return numbers.pos().at(0);
@@ -27,34 +27,18 @@
 
   set heading(numbering: "1.")
 
-  show heading: it => [
-    #block(above: 2em, below: 1em)[#it]
-  ]
+  show heading: set block(above: 2em, below: 1em)
 
-  show heading.where(level: 1): set align(center)
-
-  set par(first-line-indent: 1.25cm, justify: true, leading: 1.5em)
-
-  set list(indent: 1.25cm)
-  set enum(indent: 1.25cm)
-
-  show link: underline
-
-  show raw.where(block: true): it => [
-    #par(leading: 1em)[#it]
-  ]
+  set par(leading: 0.7em, justify: true)
+  show par: set block(spacing: 1.35em)
 
   show heading.where(level: 1): it => {
-    counter(math.equation).update(0)
     counter(figure.where(kind: image)).update(0)
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: raw)).update(0)
     it
   }
 
-  set math.equation(numbering: num =>
-    numbering("(1.1)", counter(heading).get().first(), num)
-  )
   set figure(numbering: num =>
     numbering("1.1", counter(heading).get().first(), num)
   )
