@@ -1,4 +1,3 @@
-#import "../document.typ": setup_document
 #import "../utils.typ": unindented, institution, city_and_year
 #import "course-work.typ": *
 

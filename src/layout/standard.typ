@@ -1,6 +1,6 @@
 #import "@preview/indenta:0.0.3": fix-indent
 
-#let setup_document(body) = {
+#let setup_layout(body) = {
   set text(
     font: "Times New Roman",
     size: 14pt,

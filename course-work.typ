@@ -1,7 +1,7 @@
-#import "src/document.typ": setup_document
+#import "src/layout/standard.typ": setup_layout
 #import "src/course_work/template.typ": project
 
-#show: setup_document
+#show: setup_layout
 #show: project.with(
   start_label: <start>,
   student_name: "ІВАНЧЕНКО Петро",

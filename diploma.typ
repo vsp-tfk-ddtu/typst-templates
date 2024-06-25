@@ -1,7 +1,7 @@
-#import "src/document.typ": setup_document
+#import "src/layout/standard.typ": setup_layout
 #import "src/diploma/template.typ": project
 
-#show: setup_document
+#show: setup_layout
 #show: project.with(
   student_name: "ІВАНЧЕНКО Петро",
   student_name_genitive: "Іванченко Петру Миколайовичу",
