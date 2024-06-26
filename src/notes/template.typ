@@ -4,6 +4,7 @@
   author: none,
   revision_date: none,
   type: none,
+  hero_image: none,
   body
 ) = {
   align(center)[
@@ -19,7 +20,11 @@
         #heading(numbering: none, level: 2)[#type]
       ]
     ]
-    #line(length: 100%)
+    #if hero_image != none {
+      hero_image
+    } else {
+      line(length: 100%)
+    }
   ]
 
   body

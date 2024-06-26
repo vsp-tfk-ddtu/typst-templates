@@ -12,9 +12,9 @@
     paper: "a4",
     margin: (
       top: 2cm,
-      right: 1cm,
-      bottom: 2cm,
-      left: 2.5cm
+      right: 2cm,
+      bottom: 1.5cm,
+      left: 2cm
     ),
     numbering: (..numbers) => {
       if numbers.pos().at(0) == 1 {
