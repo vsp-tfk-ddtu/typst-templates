@@ -24,7 +24,7 @@
 
   show heading: set block(above: 2em, below: 1em)
 
-  set par(leading: 0.7em, justify: true)
+  set par(leading: 1em, justify: true)
   show par: set block(spacing: 1.35em)
 
   show heading.where(level: 1): it => {
