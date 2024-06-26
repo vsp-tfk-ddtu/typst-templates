@@ -11,18 +11,13 @@
   set page(
     paper: "a4",
     margin: (
-      top: 2cm,
+      top: 1.5cm,
       right: 2cm,
-      bottom: 1.5cm,
+      bottom: 2cm,
       left: 2cm
     ),
-    numbering: (..numbers) => {
-      if numbers.pos().at(0) == 1 {
-        return;
-      }
-      return numbers.pos().at(0);
-    },
-    number-align: center + top
+    numbering: "1",
+    number-align: right + bottom
   )
 
   set heading(numbering: "1.")
