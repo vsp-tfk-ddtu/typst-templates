@@ -1,4 +1,5 @@
 #import "@preview/indenta:0.0.3": fix-indent
+#import "@preview/codly:0.2.0": *
 
 #let setup_layout(body) = {
   set text(
@@ -28,7 +29,7 @@
   set heading(numbering: "1.")
 
   show heading: it => [
-    #block(above: 1em, below: 1em)[#it]
+    #block(above: 2em, below: 1em)[#it]
   ]
 
   show heading.where(level: 1): set align(center)
@@ -57,6 +58,14 @@
   )
   set figure(numbering: num =>
     numbering("1.1", counter(heading).get().first(), num)
+  )
+
+  // show raw: set text(font: "Fira Mono")
+  show: codly-init.with()
+  codly(
+    zebra-color: white,
+    display-name: false,
+    display-icon: false,
   )
 
   show: fix-indent()
