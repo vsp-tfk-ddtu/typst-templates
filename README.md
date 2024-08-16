@@ -26,9 +26,9 @@ create a new project in there.
 Then upload the required templates from this repository into
 Typst web project. For example, if you're writing a diploma,
 then upload files from `src/diploma` to project file system.
-I recommend to upload them into a folder called `template`.
+I recommend to upload them into a folder called `src/`.
 
-Also, upload the desired layout into a `layout` folder.
+Also, upload the desired layout into a `src/` folder.
 If you're student, 90% chance that you need to upload `src/layout/standard.typ`.
 
 After you uploaded the layout files, go to `main.typ` and
