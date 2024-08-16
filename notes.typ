@@ -4,7 +4,7 @@
 #show: set_layout
 #show: project.with(
   subject: "Алгоритми та структури даних",
-  author: "Кравець М. Ю.",
+  author: "Jon Doe",
   revision_date: "1 вересня 2024",
   type: "Конспект лекцій",
 )
