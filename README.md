@@ -60,3 +60,10 @@ The manual is next
 3. Copy the desired layout / template to the repository;
 4. Create `main.typ` file, use layout and template function;
 5. Write your paper.
+
+## Times New Roman
+
+Times New Roman font requires licensing which [Typst.app](https://typst.app)
+doesn't have. So, if you wish to use Times New Roman font,
+you should download it from internet and upload it to the
+Typest.app project's file system root.
