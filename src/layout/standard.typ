@@ -60,7 +60,7 @@
     numbering("1.1", counter(heading).get().first(), num)
   )
 
-  show raw: set text(font: "Fira Mono")
+  // show raw: set text(font: "Fira Mono")
   show: codly-init.with()
   codly(
     zebra-color: white,
