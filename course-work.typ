@@ -40,6 +40,6 @@
   ]
 )
 
-#heading(numbering: none)[ВСТУП] <start>
+#heading(numbering: none)[ВСТУП]
 
 #lorem(150)

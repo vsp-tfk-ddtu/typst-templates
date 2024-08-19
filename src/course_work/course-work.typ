@@ -123,9 +123,11 @@
   )
 
   align(center)[
+    #v(4em, weak: true)
     #block(above: 2em)[
       #heading(level: 2, numbering: none, outlined: false)[ЗАВДАННЯ]
     ]
+
     #block(above: 1em, below: 0em)[
       #par(leading: 0.5em)[
         на курсову роботу
@@ -153,6 +155,7 @@
   ]
 
   align(center)[
+    #v(2em, weak: true)
     #block(above: 2em)[
       #heading(outlined: false, numbering: none, level: 2)[Початкові дані]
     ]

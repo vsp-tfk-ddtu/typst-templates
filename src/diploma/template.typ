@@ -70,9 +70,11 @@
         work_content: work_content,
         graphic_material: graphic_material
       )
+    ]
+  ]
 
-      // #pagebreak()
-
+  page(numbering: none)[
+    #unindented[
       #task_consultants(
         main_part: supervisor_name,
         economy_part: economy_supervisor_name,

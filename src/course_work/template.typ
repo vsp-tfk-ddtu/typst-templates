@@ -27,73 +27,74 @@
 ) = {
 
   // Title Page
-  unindented[
-    #institution()
-      #cycle_commission(commission_name: commission_name)
-      #work_title(
-        discipline: discipline,
-        title: title,
-        course_num: course_num,
-        group: group,
-        knowledge_branch: knowledge_branch,
-        specialty: specialty,
-        student_name: student_name,
-        supervisor_name: supervisor_name,
-        supervisor_title: supervisor_title,
-        commission_members: commission_members
-      )
-      #city_and_year(city: city)
+  page(numbering: none)[
+    #unindented[
+      #institution()
+        #cycle_commission(commission_name: commission_name)
+        #work_title(
+          discipline: discipline,
+          title: title,
+          course_num: course_num,
+          group: group,
+          knowledge_branch: knowledge_branch,
+          specialty: specialty,
+          student_name: student_name,
+          supervisor_name: supervisor_name,
+          supervisor_title: supervisor_title,
+          commission_members: commission_members
+        )
+        #city_and_year(city: city)
+    ]
   ]
-
-  pagebreak()
-
 
   // Task Page
-  unindented[
-    #institution()
-    #task_header(
-      department_name: department_name,
-      commission_name: commission_name,
-      commission_short: commission_name_short,
-      knowledge_branch: knowledge_branch,
-      specialty: specialty,
-      commission_head_name: commission_head_name,
-    )
-    #task_body(
-      to_whom: student_name_genitive,
-      group: group,
-      work_name: title,
-      work_due_to: work_due_to,
-      initial_data: initial_data
-    )
-
-    #pagebreak()
-
-    #task_calendar_plan(plan: calendar_plan_data)
-    #task_signature(task_received_at: task_received_at)
+  page(numbering: none)[
+    #unindented[
+      #institution()
+      #task_header(
+        department_name: department_name,
+        commission_name: commission_name,
+        commission_short: commission_name_short,
+        knowledge_branch: knowledge_branch,
+        specialty: specialty,
+        commission_head_name: commission_head_name,
+      )
+      #task_body(
+        to_whom: student_name_genitive,
+        group: group,
+        work_name: title,
+        work_due_to: work_due_to,
+        initial_data: initial_data
+      )
+    ]
   ]
 
-  pagebreak()
+  page(numbering: none)[
+    #unindented[
+      #task_calendar_plan(plan: calendar_plan_data)
+      #task_signature(task_received_at: task_received_at)
+    ]
+  ]
 
   // Grade Page
-  unindented[
-    #institution()
-    #grade_header(
-      student_name: student_name,
-      group: group,
-    )
-    #grade_title(title: title)
-    #grades(
-      supervisor_name: supervisor_name,
-      performance_supervisor_name: commission_head_name
-    )
+  page(numbering: none)[
+    #unindented[
+      #institution()
+      #grade_header(
+        student_name: student_name,
+        group: group,
+      )
+      #grade_title(title: title)
+      #grades(
+        supervisor_name: supervisor_name,
+        performance_supervisor_name: commission_head_name
+      )
+    ]
   ]
 
-  pagebreak()
-
-  outline(indent: 1.25em)
-
-  pagebreak()
+  page(numbering: none)[
+    #outline(indent: 1.25em)
+  ]
 
   body
 }
