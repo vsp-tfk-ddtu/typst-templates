@@ -16,13 +16,7 @@
       bottom: 2cm,
       left: 2.5cm
     ),
-    numbering: (..numbers) => {
-      let start_pagination = counter(page).at(<start>).at(0);
-      if numbers.pos().at(0) < start_pagination {
-        return;
-      }
-      return numbers.pos().at(0);
-    },
+    numbering: "1",
     number-align: center + top
   )
 
