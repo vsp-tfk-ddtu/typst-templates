@@ -21,28 +21,42 @@ or Visual Studio Code.
 #### Typst.app
 
 If you decided to use Typst web application, you should
-create a new project in there.
+create a new project in the web-application.
 
-Then upload the required templates from this repository into
-Typst web project. For example, if you're writing a diploma,
-then upload files from `src/diploma` to project file system.
-I recommend to upload them into a folder called `src/`.
+Then create `src/` directory in the app file system and
+copy the desired files from `src/` directory of this
+repository to `src/` of Typst app.
 
-Also, upload the desired layout into a `src/` folder.
-If you're student, 90% chance that you need to upload `src/layout/standard.typ`.
+For diploma, you should the following files to get the
+following file structure:
 
-After you uploaded the layout files, go to `main.typ` and
-import your files
-
-```typ
-#import "layout/standard.typ": setup_layout
-#import "template/template.typ": project
+```
+src/
+    diploma/
+        diploma.typ
+        template.typ
+    layout/
+        standard.typ
+    utils.typ
+main.typ  // copy diploma.typ content here
 ```
 
-Then go to the desired example file contained in the
-repository, i.e. `diploma.typ`, copy the layout / template usage,
-fill the function arguments with the actual information,
-and write your paper.
+For course work, it should be
+
+```
+src/
+    course_work/
+        course-work.typ
+        template.typ
+    layout/
+        standard.typ
+    utils.typ
+main.typ  // copy course-work.typ content here
+```
+
+Then go back to the root of the repository and copy
+the content of either `course-work.typ` or `diploma.typ`
+to the `main.typ` file.
 
 #### VS Code
 
@@ -57,8 +71,10 @@ The manual is next
 
 1. Create a new repository;
 2. Install VS plugins Typst, Tinymist Typst, and Typst Math;
-3. Copy the desired layout / template to the repository;
-4. Create `main.typ` file, use layout and template function;
+3. Copy the desired files to `src/` of your project;
+4. Create `main.typ` file and copy the content of
+    either `course-work.typ` or `diploma.typ`
+    to the `main.typ` file;
 5. Write your paper.
 
 ## Times New Roman
