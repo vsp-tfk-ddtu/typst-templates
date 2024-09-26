@@ -28,7 +28,7 @@
   ]
 }
 
-#let signature(cycle_commission, cycle_commision_head) = {
+#let signature(cycle_commission, cycle_commission_head) = {
   grid(
     columns: (1fr, 1fr),
     [], [
@@ -40,7 +40,7 @@
 
       Протокол №`____` від `________` 202`__` р.
 
-      #cycle_commision_head
+      #cycle_commission_head
     ]
   )
 }
