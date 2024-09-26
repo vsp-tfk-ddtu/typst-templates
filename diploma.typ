@@ -82,9 +82,9 @@ Now, let's display an image:
   #image(
     "images/jan_vermeer.png",
   )
-]
+] <jan_vermeer>
 
-Now, let's display a second image:
+We displayed рисунок @jan_vermeer[]. Now, let's display a second image:
 
 #figure(
   caption: "Ян Вермеер — Die Malkunst 2",
@@ -174,6 +174,6 @@ Now, let's display an image:
     "bibl.yaml", 
     title: "ПЕРЕЛІК ПОСИЛАНЬ", 
     full: true,
-    style: "ieee",
+    style: "institute-of-electrical-and-electronics-engineers",
   )
 ]
