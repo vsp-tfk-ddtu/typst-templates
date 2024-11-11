@@ -5,16 +5,22 @@
   body
 }
 
-#let institution() = {
+#let institution(internal: false) = {
   par(leading: 0.5em, first-line-indent: 0em, justify: false)[
     #align(center)[
           #text(weight: "bold")[
-            #block(above: 0.5em)[
-              МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
-            ]
-            #parbreak()
-            #block(above: 0.5em)[
-              Відокремлений структурний підрозділ
+            #if not internal [
+              #block(above: 0.5em)[
+                МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+              ]
+              #parbreak()
+              #block(above: 0.5em)[
+                Відокремлений структурний підрозділ
+              ]
+            ] else [
+              #block(above: 0.5em)[
+                ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
+              ]
             ]
             #parbreak()
             #block(above: 0.5em)[
