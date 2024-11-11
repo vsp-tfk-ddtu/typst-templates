@@ -1,8 +1,8 @@
+#import "@preview/indenta:0.0.3": fix-indent
 #import "../utils.typ": unindented, institution, city_and_year
 #import "course-work.typ": *
 
 #let project(
-  start_label: <start>,
   student_name: none,
   student_name_genitive: none,
   group: none,
@@ -23,6 +23,7 @@
   commission_members: none,
   calendar_plan_data: (),
   initial_data: (),
+  abstract: none,
   body
 ) = {
 
@@ -90,6 +91,15 @@
         performance_supervisor_name: commission_head_name
       )
     ]
+  ]
+
+  // Abstract
+  page(numbering: none)[
+    #set par(first-line-indent: 1.25cm)
+    #show: fix-indent(unsafe: true)
+
+    #heading(outlined: false, numbering: none)[РЕФЕРАТ]
+    #abstract
   ]
 
   page(numbering: none)[
