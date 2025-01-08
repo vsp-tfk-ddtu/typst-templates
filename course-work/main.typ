@@ -1,7 +1,5 @@
-#import "layout.typ": setup_layout
 #import "template.typ": project
 
-#show: setup_layout
 #show: project.with(
   student_name: "ІВАНЧЕНКО Петро",
   student_name_genitive: "Іванченко Петру Миколайовичу",

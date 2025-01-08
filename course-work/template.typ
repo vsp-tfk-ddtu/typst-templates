@@ -332,6 +332,7 @@
   abstract: none,
   body
 ) = {
+  show: setup_layout
 
   // Title Page
   page(numbering: none)[
