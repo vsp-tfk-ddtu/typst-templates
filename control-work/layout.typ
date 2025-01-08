@@ -1,4 +1,3 @@
-#import "@preview/indenta:0.0.3": fix-indent
 #import "@preview/codly:0.2.0": *
 
 #let setup_layout(body) = {
@@ -20,18 +19,22 @@
     number-align: center + top
   )
 
-  set heading(numbering: "1.")
+  set heading(numbering: none)
 
   show heading: it => [
     #block(above: 2em, below: 1em)[#it]
   ]
 
-  show heading.where(level: 1): set align(center)
+  show heading.where(level: 1): it => [
+    #set align(center)
+    #pagebreak()
+    #it
+  ]
 
   set par(first-line-indent: 1.25cm, justify: true, leading: 1.5em)
 
   set list(indent: 1.25cm)
-  set enum(indent: 1.25cm)
+  // set enum(indent: 1.25cm)
 
   show link: underline
 
@@ -64,7 +67,11 @@
     display-icon: false,
   )
 
-  show: fix-indent()
+  show selector.or(heading, table, grid, figure): it => {
+    it
+    ""
+    context v(-par.spacing - measure("").height)
+  }
 
   body
 }
