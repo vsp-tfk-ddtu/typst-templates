@@ -412,5 +412,11 @@
     #outline(indent: 1.25em)
   ]
 
+  show table: set table(
+    inset: 7pt, 
+    stroke: (0.5pt + luma(200)), 
+    align: center + horizon
+  )
+
   body
 }
