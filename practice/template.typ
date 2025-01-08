@@ -108,6 +108,26 @@
   ]
 }
 
+#let main_statements(
+  practice_start: none, 
+  practice_end: none,
+  goal: none,
+  tasks: ()
+) = {
+  par(justify: false, first-line-indent: 0em)[Початок практики: #underline[#practice_start]]
+  par(justify: false, first-line-indent: 0em)[Кінець практики: #underline[#practice_end]]
+  par(justify: false, first-line-indent: 0em)[Мета: #underline[#goal]]
+  par(justify: false, first-line-indent: 0em)[Перелік завдань:]
+
+  for t in tasks {
+    [+ #t]
+  }
+}
+
+#let heading-upper(body) = {
+  heading(numbering: none)[#upper[#body]]
+}
+
 #let project(
   department_name: none,
   commission_name: none,
@@ -119,6 +139,10 @@
   city: "Кам’янське",
   title: none,
   supervisor_name: none,
+  practice_start: none, 
+  practice_end: none,
+  goal: none,
+  tasks: (),
   body
 ) = {
   show: setup_layout
@@ -140,7 +164,17 @@
   ]
 
   page(numbering: none)[
-    #outline(indent: 1.25em)
+    #outline(indent: 1.25em, depth: 2)
+  ]
+
+  page[
+    #heading(numbering: none)[#upper[Основні відомості]]
+    #main_statements(
+      practice_start: practice_start, 
+      practice_end: practice_end,
+      goal: goal,
+      tasks: tasks
+    )
   ]
 
   body
