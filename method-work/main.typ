@@ -1,7 +1,5 @@
 #import "template.typ": project
 
-// Станіслав БАЖАН доктор філософії з прикладної математики,
-// спеціаліст першої категорії, Юлія БІЗЮЛЬОВА викладач вищої категорії.
 #show: project.with(
   title: "Practical Work",
   disciplines: (
