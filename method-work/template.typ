@@ -7,28 +7,20 @@
 }
 
 #let institution(internal: false) = {
-  par(leading: 0.5em, first-line-indent: 0em, justify: false)[
-    #align(center)[
-          #text(weight: "bold")[
-            #if not internal [
-              #block(above: 0.5em)[
-                МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
-              ]
-              #parbreak()
-              #block(above: 0.5em)[
-                Відокремлений структурний підрозділ
-              ]
-            ] else [
-              #block(above: 0.5em)[
-                ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
-              ]
-            ]
-            #parbreak()
-            #block(above: 0.5em)[
-              «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
-            ]
-          ]
-    ]
+  set par(leading: 0.5em, first-line-indent: 0em, justify: false)
+
+  align(center)[
+      #text(weight: "bold")[
+        #block(above: 0em)[
+          МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+        ]
+        #block(above: 0.5em)[
+          Відокремлений структурний підрозділ
+        ]
+        #block(above: 0.5em)[
+          «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
+        ]
+      ]
   ]
 }
 
@@ -37,7 +29,9 @@
   
   align(bottom)[
     #align(center)[
-      м. #city — #today.year()
+      м. #city
+      
+      #today.year()
     ]
   ]
 }
@@ -47,7 +41,7 @@
   disciplines: (),
 ) = {
   align(horizon + center)[
-    Методичні рекомендації до виконання практичної роботи
+    Методичні рекомендації до виконання курсової роботи
     з дисциплін 
     #text(weight: "bold")[
       #disciplines.map(v => [«#v»]).join(", ", last: " та ")
@@ -131,7 +125,7 @@
   ]
 
   page(numbering: none)[
-    #outline(indent: 1.25em, depth: 2)
+    #outline(indent: 1.25em, depth: 2, target: heading.where().before(<end_main>))
   ]
 
   show table: set table(
@@ -140,5 +134,6 @@
     align: center + horizon
   )
 
+  pagebreak()
   body
 }
