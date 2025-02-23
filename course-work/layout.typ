@@ -1,10 +1,10 @@
-#import "@preview/codly:0.2.0": *
+#import "@preview/codly:1.2.0": *
 
 #let setup_layout(body) = {
   set text(
     font: "Times New Roman",
     size: 14pt,
-    lang: "ua",
+    lang: "uk",
     region: "ua"
   )
   set page(
@@ -27,7 +27,7 @@
 
   show heading.where(level: 1): set align(center)
 
-  set par(first-line-indent: 1.25cm, justify: true, leading: 1.5em)
+  set par(first-line-indent: (amount: 1.25cm, all: true), justify: true, leading: 1.5em)
 
   set list(indent: 1.25cm)
   set enum(indent: 1.25cm)
@@ -58,17 +58,10 @@
   // show raw: set text(font: "Fira Mono")
   show: codly-init.with()
   codly(
-    zebra-color: white,
+    zebra-fill: none,
     display-name: false,
     display-icon: false,
   )
-
-  show selector.or(heading, table, grid, figure): it => {
-    it
-    ""
-    context v(-par.spacing - measure("").height)
-  }
-
 
   body
 }
