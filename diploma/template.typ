@@ -7,29 +7,28 @@
 }
 
 #let institution(internal: false) = {
-  par(leading: 0.5em, first-line-indent: 0em, justify: false)[
-    #align(center)[
-          #text(weight: "bold")[
-            #if not internal [
-              #block(above: 0.5em)[
-                МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
-              ]
-              #parbreak()
-              #block(above: 0.5em)[
-                Відокремлений структурний підрозділ
-              ]
-            ] else [
-              #block(above: 0.5em)[
-                ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
-              ]
-            ]
-            #parbreak()
-            #block(above: 0.5em)[
-              «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
-            ]
+  set par(leading: 0.5em, first-line-indent: 0em, justify: false)
+    align(center)[
+      #text(weight: "bold")[
+        #if not internal [
+          #block(above: 0.5em)[
+            МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
           ]
+          #parbreak()
+          #block(above: 0.5em)[
+            Відокремлений структурний підрозділ
+          ]
+        ] else [
+          #block(above: 0.5em)[
+            ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
+          ]
+        ]
+        #parbreak()
+        #block(above: 0.5em)[
+          «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
+        ]
+      ]
     ]
-  ]
 }
 
 #let city_and_year(city: none) = {
@@ -37,7 +36,9 @@
   
   align(bottom)[
     #align(center)[
-      м. #city — #today.year()
+      м. #city
+      
+      #today.year()
     ]
   ]
 }
@@ -46,16 +47,15 @@
   department_name: none,
   commission_name: none
 ) = {
+  set par(leading: 0.5em, first-line-indent: 0em, justify: false)
   align(center)[
     #block(above: 2em)[
-      #par(leading: 0.5em, first-line-indent: 0em, justify: false)[
-        #block(above: 0.5em)[
-          Відділення #department_name
-        ]
-        #parbreak()
-        #block(above: 0.5em)[
-          Циклова комісія #lower[#commission_name]
-        ]
+      #block(above: 0.5em)[
+        Відділення #department_name
+      ]
+      #parbreak()
+      #block(above: 0.5em)[
+        Циклова комісія #lower[#commission_name]
       ]
     ]
   ]
@@ -86,9 +86,7 @@
         ]
       ]
       #block(above: 2em)[
-        #par(leading: 0.5em)[
-          на тему: «*#title*»
-        ]
+        на тему: «*#title*»
       ]
     ]
     
@@ -97,7 +95,7 @@
         columns: (1fr, 1fr),
         none,
         align(left)[
-          #par(justify: false, leading: 1em)[
+            #set par(justify: false, leading: 1em)
             Виконав: здобувач освіти #course_num курсу,
             #parbreak()
             групи #underline[#group]
@@ -111,7 +109,6 @@
             Керівник #underline[#supervisor_name]
             #parbreak()
             Рецезент #underline[#reviewer_name]
-          ]
         ]
       )
     ]
@@ -124,18 +121,17 @@
   klnowledge_branch,
   specialty,
 ) = {
-  par(leading: 0.5em, justify: false)[
-    #text(size: 12pt)[
-      #table(
-        columns: (1fr, 1fr),
-        stroke: none,
-        [Відділення], [#department_name], 
-        [Циклова комісія], [#commission_name], 
-        [Освітньо-кваліфікаційний рівень], [Молодший спеціаліст], 
-        [Галузь знань], [#klnowledge_branch], 
-        [Спеціальність], [#specialty], 
-      )
-    ]
+  set par(leading: 0.5em, justify: false)
+  text(size: 12pt)[
+    #table(
+      columns: (1fr, 1fr),
+      stroke: none,
+      [Відділення], [#department_name], 
+      [Циклова комісія], [#commission_name], 
+      [Освітньо-кваліфікаційний рівень], [Молодший спеціаліст], 
+      [Галузь знань], [#klnowledge_branch], 
+      [Спеціальність], [#specialty], 
+    )
   ]
 }
 
@@ -149,22 +145,21 @@
 ) = {
   task_table(department_name, commission_name, klnowledge_branch, specialty)
 
+  set par(justify: false)
   grid(
     columns: (1fr, 1fr),
     none,
     align(left)[
-      #par(justify: false)[
-        #block(above: 0.5em)[Затверджую:]
-        #parbreak()
+      #block(above: 0.5em)[Затверджую:]
+      #parbreak()
+      #block(above: 1em)[
+        Гол. циклової комісії #commission_short
+      ]
+      #block(above: 1em)[
+        `_________` #commission_head_name
+      ]
         #block(above: 1em)[
-          Гол. циклової комісії #commission_short
-        ]
-        #block(above: 1em)[
-          `_________` #commission_head_name
-        ]
-         #block(above: 1em)[
-          протокол № `___` від `_________`
-        ]
+        протокол № `___` від `_________`
       ]
     ]
   )
@@ -184,33 +179,30 @@
         #heading(level: 2, numbering: none, outlined: false)[ЗАВДАННЯ]
       ]
       #block(above: 1em, below: 0em)[
-        #par(leading: 0.5em)[
           #heading(level: 2, numbering: none, outlined: false)[
             НА КВАЛІФІКАЦІЙНУ РОБОТУ ЗДОБУВАЧУ ОСВІТИ
           ]
-        ]
       ]
     ]
 
     text(size: 12pt)[
-      #{""}
-      #par(leading: 1em, first-line-indent: 0em)[
-        #align(center)[#to_whom]
-        #parbreak()
-        Тема роботи: “#emph[#work_name]“
-        #parbreak()
-        керівник роботи: #supervisor_full
-        #parbreak()
-        затверджені наказом навчального  закладу від «`__`» `______` 20`__` року № `__`.
-        #parbreak()
-        Строк подання здобувачем освіти роботи #work_due_to.
-        #parbreak()
-        Вихідні дані до роботи: #emph[#underline[#initial_data]]
-        #parbreak()
-        Зміст розрахунково-пояснювальної записки (перелік питань, які потрібно розробити): #emph[#underline[#work_content]]
-        #parbreak()
-        Перелік графічного матеріалу (з точним зазначенням обов’язкових креслень): #emph[#underline[#graphic_material]]
-      ]
+      #{""}  // How to avoid this?
+      #set par(leading: 1em, first-line-indent: 0em)
+      #align(center)[#to_whom]
+      #parbreak()
+      Тема роботи: “#emph[#work_name]“
+      #parbreak()
+      керівник роботи: #supervisor_full
+      #parbreak()
+      затверджені наказом навчального  закладу від «`__`» `______` 20`__` року № `__`.
+      #parbreak()
+      Строк подання здобувачем освіти роботи #work_due_to.
+      #parbreak()
+      Вихідні дані до роботи: #emph[#underline[#initial_data]]
+      #parbreak()
+      Зміст розрахунково-пояснювальної записки (перелік питань, які потрібно розробити): #emph[#underline[#work_content]]
+      #parbreak()
+      Перелік графічного матеріалу (з точним зазначенням обов’язкових креслень): #emph[#underline[#graphic_material]]
   ]
 }
 
@@ -221,7 +213,8 @@
   work_health: none,
   formatting: none
 ) = {
-  par(justify: false, leading: 0.5em)[
+  set par(justify: false, leading: 0.5em)
+  [
     Консультанти розділів роботи:
 
     #text(size: 12pt)[
@@ -254,21 +247,20 @@
     #heading(outlined: false, numbering: none)[КАЛЕНДАРНИЙ ПЛАН]
   ]
   
-  par(justify: false, leading: 0.5em)[
-    #text(size: 12pt)[
-      #table(
-        columns: (auto, 1fr, 30%),
-        align: center + horizon,
-        table.header(
-          [№ з/п],
-          [Назва етапів дипломної роботи],
-          [Строк виконання етапів роботи]
-        ),
-        ..for (i, v) in plan.enumerate(start: 1) {
-          (str(i), v.at(0), v.at(1))
-        }
-      )
-    ]
+  set par(justify: false, leading: 0.5em)
+  text(size: 12pt)[
+    #table(
+      columns: (auto, 1fr, 30%),
+      align: center + horizon,
+      table.header(
+        [№ з/п],
+        [Назва етапів дипломної роботи],
+        [Строк виконання етапів роботи]
+      ),
+      ..for (i, v) in plan.enumerate(start: 1) {
+        (str(i), v.at(0), v.at(1))
+      }
+    )
   ]
 }
 
@@ -304,39 +296,37 @@
   group: none,
   title: none
 ) = {
+  set par(justify: false)
   block(above: 2em)[
-    #par(justify: false)[
-      #text(size: 12pt)[
-        #grid(
-          columns: (auto, 1fr),
-          align: (left, right),
-          [Відділення #department_name], [Циклова комісія #commission_short]
-        )
-        #parbreak()
-        #grid(
-          columns: (auto, 1fr),
-          align: (left, right),
-          [Спеціальність], [#specialty]
-        )
-        #parbreak()
-        #block(above: 2em)[
-          Здобувач освіти #underline[#student_name] групи #underline[#group].
-        ]
+    #text(size: 12pt)[
+      #grid(
+        columns: (auto, 1fr),
+        align: (left, right),
+        [Відділення #department_name], [Циклова комісія #commission_short]
+      )
+      #parbreak()
+      #grid(
+        columns: (auto, 1fr),
+        align: (left, right),
+        [Спеціальність], [#specialty]
+      )
+      #parbreak()
+      #block(above: 2em)[
+        Здобувач освіти #underline[#student_name] групи #underline[#group].
       ]
     ]
   ]
 }
 
 #let grade_title(title: none) = {
-  par(justify: false, leading: 0.5em)[
-    #text(size: 12pt)[
-      #align(horizon)[
-        #grid(
-          columns: (auto, 1fr),
-          align: top,
-          [Тема кваліфікаційної роботи:], [#underline[«#title»]]
-        )
-      ]
+  set par(justify: false, leading: 0.5em)
+  text(size: 12pt)[
+    #align(horizon)[
+      #grid(
+        columns: (auto, 1fr),
+        align: top,
+        [Тема кваліфікаційної роботи:], [#underline[«#title»]]
+      )
     ]
   ]
 }
