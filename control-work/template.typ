@@ -7,27 +7,26 @@
 }
 
 #let institution(internal: false) = {
-  par(leading: 0.5em, first-line-indent: 0em, justify: false)[
-    #align(center)[
-          #text(weight: "regular")[
-            #if not internal [
-              #block(above: 0.5em)[
-                МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
-              ]
-              #parbreak()
-              #block(above: 0.5em)[
-                Відокремлений структурний підрозділ
-              ]
-            ] else [
-              #block(above: 0.5em)[
-                ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
-              ]
-            ]
-            #parbreak()
-            #block(above: 0.5em)[
-              «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
-            ]
-          ]
+  set par(leading: 0.5em, first-line-indent: 0em, justify: false)
+  align(center)[
+    #text(weight: "regular")[
+      #if not internal [
+        #block(above: 0.5em)[
+          МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+        ]
+        #parbreak()
+        #block(above: 0.5em)[
+          Відокремлений структурний підрозділ
+        ]
+      ] else [
+        #block(above: 0.5em)[
+          ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ
+        ]
+      ]
+      #parbreak()
+      #block(above: 0.5em)[
+        «ТЕХНОЛОГІЧНИЙ ФАХОВИЙ КОЛЕДЖ ДНІПРОВСЬКОГО ДЕРЖАВНОГО ТЕХНІЧНОГО УНІВЕРСИТЕТУ»
+      ]
     ]
   ]
 }
@@ -52,11 +51,9 @@
     [], [
       #upper[*Затверджую:*]
 
-      #par(leading: 1em)[
-        *Заступник директора*
-        
-        *з навчально-методичної роботи*
-      ]
+      *Заступник директора*
+      
+      *з навчально-методичної роботи*
 
       `_________` #vice_director
 
