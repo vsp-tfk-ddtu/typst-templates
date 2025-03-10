@@ -390,8 +390,6 @@
 
   // Abstract
   page(numbering: none)[
-    #set par(first-line-indent: 1.25cm)
-
     #heading(outlined: false, numbering: none)[РЕФЕРАТ]
     #abstract
   ]
