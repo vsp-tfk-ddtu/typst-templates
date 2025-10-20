@@ -36,9 +36,7 @@
   
   align(bottom)[
     #align(center)[
-      м. #city
-      
-      #today.year()
+      м. #city — #today.year()
     ]
   ]
 }

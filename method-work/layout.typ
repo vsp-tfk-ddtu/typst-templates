@@ -1,4 +1,5 @@
-#import "@preview/codly:1.2.0": *
+#import "@preview/codly:1.3.0": *
+#import "@preview/codly-languages:0.1.1": *
 
 #let setup_layout(body) = {
   set text(
@@ -64,6 +65,7 @@
     zebra-fill: white,
     display-name: false,
     display-icon: false,
+     languages: codly-languages,
   )
 
   body

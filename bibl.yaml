@@ -1,0 +1,95 @@
+intro_to_algorithms:
+  type: Book
+  title: Introduction to Algorithms
+  author: ["Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest", "Clifford Stein"]
+  date: 2022
+  edition: Fourth Edition
+  publisher: The MIT Press
+  location: Cambridge, Massachusetts
+intro_to_algo_analysis:
+  type: Book
+  title: Introduction to Algorithms
+  author: ["Robert Sedgewick", "Philippe Flajolet"]
+  date: 2013
+  edition: Second Edition
+  publisher: Pearson Education, Inc.
+  location: USA
+art_of_programming:
+  type: Book
+  title: The Art of Computer Programming
+  author: "Donald Knuth"
+  volume: 3
+  publisher: "Addison-Wesley Professional"
+  date: 2022
+big_o_bachman:
+  type: Book
+  title: Die analytische Zahlentheorie
+  author: "Paul Bahmann"
+  date: 1894
+  publisher: Druck und Verlag von B. G. Teubner
+  location: Leipzig
+big_o_landau:
+  type: Book
+  title: Handbuch der Lehre von der Verteilung der Primzahlen
+  author: "Edmund Landau"
+  date: 1909
+  publisher: Druck und Verlag von B. G. Teubner
+  location: Leipzig und Berlin
+quick_sort_paper:
+  type: article
+  title: Quicksort
+  author: "C. A. R. Hoare"
+  date: 1962
+  publisher: "Oxford Academic"
+  url: https://academic.oup.com/comjnl/article/5/1/10/395338
+hash_functions:
+  type: web
+  title: SMHasher - A List of Hash Functions
+  author: "Reini Urban"
+  url: https://rurban.github.io/smhasher/ 
+sip_hash:
+  type: article
+  title: "SipHash: a fast short-input PRF"
+  author: ["Jean-Philippe Aumasson", "Daniel J. Bernstein"]
+  url: https://eprint.iacr.org/2012/351
+  date: 2012
+rust_alrorithms_linked_list:
+  type: repository
+  title: "Rust Algorithms - Linked List"
+  url: https://github.com/TheAlgorithms/Rust/blob/master/src/data_structures/linked_list.rs
+  parent:
+    type: repository
+    title: "The Algorithms - Rust"
+    date: 2018-09
+    url: https://github.com/TheAlgorithms/Rust
+nondeterministic_algorithms:
+  type: article
+  title: "Nondeterministic Algorithms"
+  author: "Robert W. Floyd"
+  date: 1967-10-01
+  parent:
+    type: periodical
+    title: "Journal of the ACM (JACM)"
+    volume: 14
+    issue: 4
+  page-range: 636-644
+  url: https://dl.acm.org/doi/10.1145/321420.321422
+  serial-number: "10.1145/321420.321422"
+art_of_computer_programming:
+  type: book
+  title: "The Art of Computer Programming"
+  author: "Donald E. Knuth"
+  publisher: "Addison-Wesley"
+  organization: "Stanford University"
+  edition: 3
+  volume: 2
+  date: 1998-09
+  page-range: 7-8
+rust_collections:
+  type: web
+  title: "Rust Collections"
+  url: "https://doc.rust-lang.org/stable/std/collections/"
+python_sortedcontainers:
+  type: web
+  title: "Python Sortedcontainers"
+  url: "https://pypi.org/project/sortedcontainers/"

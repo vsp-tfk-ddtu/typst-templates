@@ -28,6 +28,7 @@
     ("Розробка програми", "09.02.2023 - 01.03.2023"),
     ("Опис розробленої програми", "01.03.2023 - 06.03.2023"),
     ("Графічна частина (презентація), вступ, висновки, перелік посилань, реферат", "06.03.2023 - 12.03.2023"),
+    ("Нормоконтроль і перевірка на антиплагіат", "12.03.2023"),
     ("Попередній захист роботи", "13.03.2023"),
     ("Захист роботи", "14.03.2023"),
   ),
@@ -54,3 +55,23 @@
 #heading(numbering: none)[ВСТУП]
 
 #lorem(150)
+
+Let's use the first bibliography source as @art_of_computer_programming. Or if you want to add an additional
+text use the following syntax @art_of_programming[p. 35].
+
+#pagebreak()
+
+#bibliography(
+  "../bibl.yaml", 
+  title: "ПЕРЕЛІК ПОСИЛАНЬ", 
+)
+
+// Note that only the USED sources are displayed by bibliography
+// function. If you want to display all sources despite the fact
+// that you're not mentioning them in the document, pass `full: true` argument to the function such as
+// 
+// #bibliography(
+//   "../bibl.yaml", 
+//   title: "ПЕРЕЛІК ПОСИЛАНЬ", 
+//   full: true
+// )
