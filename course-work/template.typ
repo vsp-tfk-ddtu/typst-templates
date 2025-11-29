@@ -132,10 +132,12 @@
 #let task_header(
   department_name: none,
   commission_name: none,
-  commission_short: "ПЗ та ПМ",
+  commission_short: "ІТ",
   knowledge_branch: none,
   specialty: none,
   commission_head_name: "J. Jr. Doe",
+  protocol_number: [`___`],
+  protocol_date: [`_________`]
 ) = {
   task_table(department_name, commission_name, specialty)
 
@@ -153,7 +155,7 @@
         `_________` #commission_head_name
       ]
        #block(above: 1em)[
-        протокол № `___` від `_________`
+        протокол № #protocol_number від #protocol_date
       ]
     ]
   )
@@ -302,7 +304,9 @@
   city: "Кам’янське",
   department_name: "технолого-економічне",
   commission_name: "Програмного забезпечення та прикладної математики",
-  commission_name_short: "ПЗ та ПМ",
+  commission_name_short: "ІТ",
+  protocol_number: [`___`],
+  protocol_date: [`_________`],
   knowledge_branch: "12 Інформаційні технології",
   specialty: "121 “Інженерія програмного забезпечення”",
   discipline: none,
@@ -352,6 +356,8 @@
         knowledge_branch: knowledge_branch,
         specialty: specialty,
         commission_head_name: commission_head_name,
+        protocol_number: protocol_number,
+        protocol_date: protocol_date
       )
       #task_body(
         to_whom: student_name_genitive,
