@@ -7,8 +7,11 @@ Currently, the repository contains the following templates
 
 - [Course Work](/course-work)
 - [Diploma](/diploma)
-- [Practice Report](/practice)
+- [Practical Training Report](/practical-training)
+- [Pre-graduation Training Report](/pregraduation-training)
+- [Work Training Report](/work-training)
 - [Control Work](/control-work)
+- [Study Guide](/study-guide)
 
 ## How to Use
 

@@ -58,22 +58,18 @@
 
 #lorem(150)
 
-Let's use the first bibliography source as @art_of_computer_programming. Or if you want to add an additional
-text use the following syntax @art_of_programming[p. 35].
+// Upload bibl.yaml file to the root of the project and uncomment all the code below
+// Let's use the first bibliography source as @art_of_computer_programming. Or if you want to add an additional
+// text use the following syntax @art_of_programming[p. 35].
 
-#pagebreak()
-
-#bibliography(
-  "../bibl.yaml", 
-  title: "ПЕРЕЛІК ПОСИЛАНЬ", 
-)
+// #pagebreak()
 
 // Note that only the USED sources are displayed by bibliography
 // function. If you want to display all sources despite the fact
 // that you're not mentioning them in the document, pass `full: true` argument to the function such as
 // 
 // #bibliography(
-//   "../bibl.yaml", 
+//   "bibl.yaml", 
 //   title: "ПЕРЕЛІК ПОСИЛАНЬ", 
 //   full: true
 // )
