@@ -10,6 +10,7 @@ Currently, the repository contains the following templates
 - [Practical Training Report](/practical-training)
 - [Pre-graduation Training Report](/pregraduation-training)
 - [Work Training Report](/work-training)
+- [Work Training Diary](/work-training-diary)
 - [Control Work](/control-work)
 - [Study Guide](/study-guide)
 
