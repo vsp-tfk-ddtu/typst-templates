@@ -9,6 +9,7 @@ Currently, the repository contains the following templates
 - [Diploma](/diploma)
 - [Practical Training Report](/practical-training)
 - [Pre-graduation Training Report](/pregraduation-training)
+- [Pre-graduation Training Diary](/pregraduation-training-diary)
 - [Work Training Report](/work-training)
 - [Work Training Diary](/work-training-diary)
 - [Control Work](/control-work)
