@@ -378,6 +378,7 @@
   formatting_supervisor_name: none,
   title: none,
   work_due_to: none,
+  issue_date: none,
   supervisor_title: none,
   initial_data: none,
   work_content: none,
@@ -439,7 +440,8 @@
         main_part: supervisor_name,
         economy_part: economy_supervisor_name,
         work_health: work_health_supervisor_name,
-        formatting: formatting_supervisor_name
+        formatting: formatting_supervisor_name,
+        issue_date: issue_date
       )
       #task_calendar_plan(plan: calendar_plan_data)
       #task_signature()
