@@ -384,6 +384,7 @@
   work_content: none,
   graphic_material: none,
   calendar_plan_data: (),
+  abstract: none,
   body
 ) = {
   show: setup_layout
@@ -468,6 +469,12 @@
         performance_supervisor_name: performance_supervisor_name
       )
     ]
+  ]
+
+    // Abstract
+  page(numbering: none)[
+    #heading(outlined: false, numbering: none)[РЕФЕРАТ]
+    #abstract
   ]
 
   page(numbering: none)[
