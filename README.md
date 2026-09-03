@@ -14,6 +14,7 @@ Currently, the repository contains the following templates
 - [Work Training Diary](/work-training-diary)
 - [Control Work](/control-work)
 - [Study Guide](/study-guide)
+- [Individual Project Assignment](/individual-project-assignment)
 
 ## How to Use
 
