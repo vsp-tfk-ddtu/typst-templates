@@ -15,6 +15,7 @@ Currently, the repository contains the following templates
 - [Control Work](/control-work)
 - [Study Guide](/study-guide)
 - [Open Lesson Guide](/open-lesson)
+- [Task](/task/). A task for control work or something similar
 - [Individual Project Assignment](/individual-project-assignment)
 
 ## How to Use
