@@ -272,7 +272,7 @@
 
 #let grades(
   supervisor_name: none,
-  performance_supervisor_name: none
+  compliance_supervisor_name: none
 ) = {
   align(bottom)[
     #heading(outlined: false, numbering: none)[Оцінки по роботі]
@@ -290,7 +290,7 @@
       [Зміст пояснювальної записки],[#supervisor_name],[],[],
       [Якість програмного додатку],[#supervisor_name],[],[],
       [Захист роботи],[#supervisor_name],[],[],
-      [Нормоконтроль],[#performance_supervisor_name],[],[],
+      [Нормоконтроль],[#compliance_supervisor_name],[],[],
       [*Загальна оцінка*],[],[],[],
     )
   ]
@@ -315,6 +315,7 @@
   task_received_at: none,
   supervisor_name: none,
   supervisor_title: none,
+  compliance_supervisor_name: none,
   commission_head_name: none,
   commission_members: none,
   calendar_plan_data: (),
@@ -387,7 +388,7 @@
       #grade_title(title: title)
       #grades(
         supervisor_name: supervisor_name,
-        performance_supervisor_name: commission_head_name
+        compliance_supervisor_name: compliance_supervisor_name
       )
     ]
   ]
