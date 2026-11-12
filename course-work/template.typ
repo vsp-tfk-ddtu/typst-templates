@@ -315,6 +315,7 @@
   task_received_at: none,
   supervisor_name: none,
   supervisor_title: none,
+  performance_supervisor_name: none,
   commission_head_name: none,
   commission_members: none,
   calendar_plan_data: (),
@@ -387,7 +388,7 @@
       #grade_title(title: title)
       #grades(
         supervisor_name: supervisor_name,
-        performance_supervisor_name: commission_head_name
+        performance_supervisor_name: performance_supervisor_name
       )
     ]
   ]
